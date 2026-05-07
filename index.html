@@ -13,7 +13,7 @@
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0a0e1a;
+      background: #0f0a00;
       color: #fff;
       overflow-x: hidden;
       min-height: 100vh;
@@ -22,15 +22,15 @@
     /* ── Animated Background ── */
     .bg {
       position: fixed; inset: 0; z-index: 0;
-      background: linear-gradient(135deg, #0a0e1a 0%, #0d1b3e 40%, #0a1628 70%, #0d0a1a 100%);
+      background: linear-gradient(135deg, #0f0a00 0%, #1a1000 40%, #120d00 70%, #0f0800 100%);
     }
     .bg::before {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 20% 20%, rgba(59,130,246,.12) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 80% at 80% 80%, rgba(139,92,246,.10) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 50% 50%, rgba(16,185,129,.06) 0%, transparent 70%);
+        radial-gradient(ellipse 80% 60% at 20% 20%, rgba(255,140,0,.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 80%, rgba(220,80,0,.10) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255,200,0,.06) 0%, transparent 70%);
       animation: bgPulse 8s ease-in-out infinite alternate;
     }
     @keyframes bgPulse { 0% { opacity: .7; } 100% { opacity: 1; } }
@@ -70,7 +70,7 @@
     }
     .header-city {
       font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: 2px;
-      background: linear-gradient(135deg, #ffd700, #fff 50%, #ffd700);
+      background: linear-gradient(135deg, #ff8c00, #ffd700 50%, #ff8c00);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text; line-height: 1.1; margin-bottom: 8px;
     }
@@ -80,14 +80,14 @@
     }
     .header-divider {
       width: 80px; height: 3px;
-      background: linear-gradient(90deg, transparent, #ffd700, transparent);
+      background: linear-gradient(90deg, transparent, #ff8c00, transparent);
       margin: 0 auto 20px; border-radius: 2px;
     }
     .header-tagline {
       font-size: 1.05rem; color: rgba(255,255,255,.7);
       max-width: 540px; margin: 0 auto; line-height: 1.7;
     }
-    .header-tagline strong { color: #ffd700; }
+    .header-tagline strong { color: #ff8c00; }
     .header-anim {
       opacity: 0; transform: translateY(-20px);
       animation: fadeDown .8s ease .1s forwards;
@@ -97,8 +97,8 @@
     /* ── Stats Banner ── */
     .stats-bar { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
     .stats-inner {
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,140,0,.05);
+      border: 1px solid rgba(255,140,0,.2);
       border-radius: 16px; padding: 30px 40px;
       display: flex; justify-content: space-around; align-items: center;
       flex-wrap: wrap; gap: 20px;
@@ -106,7 +106,7 @@
     .bstat { text-align: center; }
     .bstat .n {
       font-size: 1.8rem; font-weight: 900;
-      background: linear-gradient(135deg, #ffd700, #fff);
+      background: linear-gradient(135deg, #ff8c00, #ffd700);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text; line-height: 1;
     }
@@ -120,13 +120,13 @@
     .programs-section { padding: 20px 20px 80px; }
     .slabel { text-align: center; margin-bottom: 50px; }
     .pill {
-      display: inline-block; background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.6);
+      display: inline-block; background: rgba(255,140,0,.1);
+      border: 1px solid rgba(255,140,0,.3); color: rgba(255,200,100,.8);
       font-size: .75rem; letter-spacing: 3px; text-transform: uppercase;
       padding: 8px 20px; border-radius: 50px; margin-bottom: 14px;
     }
     .slabel h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; color: #fff; }
-    .slabel h2 span { color: #ffd700; }
+    .slabel h2 span { color: #ff8c00; }
 
     /* ── Programs Grid ── */
     .grid {
@@ -138,7 +138,7 @@
     .card {
       position: relative; border-radius: 20px; overflow: hidden;
       background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.1);
+      border: 1px solid rgba(255,180,0,.15);
       backdrop-filter: blur(20px);
       transition: transform .4s cubic-bezier(.175,.885,.32,1.275),
                   box-shadow .4s ease, border-color .4s ease;
@@ -150,7 +150,7 @@
     .card:nth-child(2) { animation-delay: .25s; }
     .card:nth-child(3) { animation-delay: .4s; }
     @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-    .card:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(255,255,255,.25); }
+    .card:hover { transform: translateY(-12px) scale(1.02); border-color: rgba(255,180,0,.4); }
     .hw:hover  { box-shadow: 0 30px 80px rgba(192,57,43,.4); }
     .wol:hover { box-shadow: 0 30px 80px rgba(224,92,0,.4); }
     .sbb:hover { box-shadow: 0 30px 80px rgba(0,119,182,.4); }
